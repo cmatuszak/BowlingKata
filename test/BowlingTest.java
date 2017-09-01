@@ -76,4 +76,14 @@ public class BowlingTest {
     public void testSpareAfterStrike() {
         Assert.assertEquals(36, Bowling.score("X 1/ 3- -- -- -- -- -- -- --"));
     }
+
+    @Test
+    public void testTwoStrikes() {
+        Assert.assertEquals(30, Bowling.score("X X -- -- -- -- -- -- -- --"));
+    }
+
+    @Test
+    public void testThreeStrikes() {
+        Assert.assertEquals(60, Bowling.score("X X X -- -- -- -- -- -- --"));
+    }
 }
