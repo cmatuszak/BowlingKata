@@ -3,11 +3,20 @@
  */
 public class Bowling {
 
+    /**
+     * Calculates the score of a bowling game
+     * @param frames the frames of the game represented as a string
+     *               Assumes only valid bowling inputs are given
+     * @return the final score of the game
+     */
     public static int score(String frames) {
-        if (frames.charAt(0) != '-') {
-            return Integer.parseInt(Character.toString(frames.charAt(0)));
-        } else {
-            return 0;
+        int score = 0;
+        for(int i = 0; i < frames.length(); i++) {
+            if (frames.charAt(i) != '-' && frames.charAt(i) != ' ') {
+                score += Integer.parseInt(Character.toString(frames.charAt(i)));
+            }
         }
+        return score;
     }
+
 }

@@ -22,4 +22,8 @@ public class BowlingTest {
         Assert.assertEquals(2, Bowling.score("2- -- -- -- -- -- -- -- -- --"));
     }
 
+    @Test
+    public void testTwoRollsRestMisses() {
+        Assert.assertEquals(3, Bowling.score("12 -- -- -- -- -- -- -- -- --"));
+    }
 }
