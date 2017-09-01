@@ -17,6 +17,9 @@ public class Bowling {
             if (frames.charAt(i) != '-' && frames.charAt(i) != ' ') {
                 if (frames.charAt(i) == '/') {
                     score += 10 - Integer.parseInt(Character.toString(frames.charAt(i - 1)));
+                    if (spare) {
+                        score += 10 - Integer.parseInt(Character.toString(frames.charAt(i - 1)));
+                    }
                     spare = true;
                 } else if (frames.charAt(i) == 'X') {
                     score += 10;
