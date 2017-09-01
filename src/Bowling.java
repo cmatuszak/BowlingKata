@@ -12,6 +12,7 @@ public class Bowling {
     public static int score(String frames) {
         int score = 0;
         boolean spare = false;
+        boolean strike = false;
         for(int i = 0; i < frames.length(); i++) {
             if (frames.charAt(i) != '-' && frames.charAt(i) != ' ') {
                 if (frames.charAt(i) == '/') {
@@ -19,13 +20,14 @@ public class Bowling {
                     spare = true;
                 } else if (frames.charAt(i) == 'X') {
                     score += 10;
-                    if (spare) {
+                    if (spare || strike) {
                         score += 10;
                     }
-                    spare = true;
+                    spare = false;
+                    strike = true;
                 } else {
                     score += Integer.parseInt(Character.toString(frames.charAt(i)));
-                    if (spare) {
+                    if (spare || strike) {
                         score += Integer.parseInt(Character.toString(frames.charAt(i)));
                         spare = false;
                     }

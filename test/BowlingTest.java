@@ -61,4 +61,9 @@ public class BowlingTest {
     public void testSingleRollAfterStrike() {
         Assert.assertEquals(12, Bowling.score("X 1- -- -- -- -- -- -- -- --"));
     }
+
+    @Test
+    public void testTwoRollsAfterStrike() {
+        Assert.assertEquals(16, Bowling.score("X 12 -- -- -- -- -- -- -- --"));
+    }
 }
