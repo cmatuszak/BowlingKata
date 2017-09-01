@@ -29,7 +29,12 @@ public class Bowling {
                     score += Integer.parseInt(Character.toString(frames.charAt(i)));
                     if (spare || strike) {
                         score += Integer.parseInt(Character.toString(frames.charAt(i)));
-                        spare = false;
+                        if (spare) {
+                            spare = false;
+                        } else if (strike) {
+                            strike = false;
+                            spare = true;
+                        }
                     }
                 }
             }
