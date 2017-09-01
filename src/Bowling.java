@@ -4,6 +4,10 @@
 public class Bowling {
 
     public static int score(String frames) {
-        return 0;
+        if (frames.charAt(0) == '1') {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
