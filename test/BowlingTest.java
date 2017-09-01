@@ -42,4 +42,9 @@ public class BowlingTest {
         Assert.assertEquals(12, Bowling.score("1/ 1- -- -- -- -- -- -- -- --"));
     }
 
+    @Test
+    public void testSpareWith12NextFrame() {
+        Assert.assertEquals(14, Bowling.score("1/ 12 -- -- -- -- -- -- -- --"));
+    }
+
 }
