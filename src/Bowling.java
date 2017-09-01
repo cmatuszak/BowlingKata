@@ -22,6 +22,7 @@ public class Bowling {
                     if (spare) {
                         score += 10;
                     }
+                    spare = true;
                 } else {
                     score += Integer.parseInt(Character.toString(frames.charAt(i)));
                     if (spare) {
