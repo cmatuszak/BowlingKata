@@ -86,4 +86,19 @@ public class BowlingTest {
     public void testThreeStrikes() {
         Assert.assertEquals(60, Bowling.score("X X X -- -- -- -- -- -- --"));
     }
+
+    @Test
+    public void testAllNines() {
+        Assert.assertEquals(90, Bowling.score("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"));
+    }
+
+    @Test
+    public void testAllFiveSpares() {
+        Assert.assertEquals(150, Bowling.score("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"));
+    }
+
+    @Test
+    public void testPerfectGame() {
+        Assert.assertEquals(300, Bowling.score("X X X X X X X X X XXX"));
+    }
 }
