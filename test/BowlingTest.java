@@ -101,4 +101,15 @@ public class BowlingTest {
     public void testPerfectGame() {
         Assert.assertEquals(300, Bowling.score("X X X X X X X X X XXX"));
     }
+
+    @Test
+    public void testMissesAfterStrike() {
+        Assert.assertEquals(15, Bowling.score("X -- 23 -- -- -- -- -- -- --"));
+    }
+
+    @Test
+    public void testAlmostPerfectGame() {
+        Assert.assertEquals(275, Bowling.score("X X X X X X X X X 5/X"));
+    }
+
 }
