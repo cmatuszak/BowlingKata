@@ -47,4 +47,9 @@ public class BowlingTest {
         Assert.assertEquals(14, Bowling.score("1/ 12 -- -- -- -- -- -- -- --"));
     }
 
+    @Test
+    public void testSingleStrike() {
+        Assert.assertEquals(10, Bowling.score("X -- -- -- -- -- -- -- -- --"));
+    }
+
 }
