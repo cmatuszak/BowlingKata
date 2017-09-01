@@ -52,4 +52,8 @@ public class BowlingTest {
         Assert.assertEquals(10, Bowling.score("X -- -- -- -- -- -- -- -- --"));
     }
 
+    @Test
+    public void testStrikeAfterSpare() {
+        Assert.assertEquals(30, Bowling.score("1/ X -- -- -- -- -- -- -- --"));
+    }
 }
