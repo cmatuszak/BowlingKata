@@ -13,7 +13,11 @@ public class Bowling {
         int score = 0;
         for(int i = 0; i < frames.length(); i++) {
             if (frames.charAt(i) != '-' && frames.charAt(i) != ' ') {
-                score += Integer.parseInt(Character.toString(frames.charAt(i)));
+                if (frames.charAt(i) == '/') {
+                    score += 10 - Integer.parseInt(Character.toString(frames.charAt(i - 1)));
+                } else {
+                    score += Integer.parseInt(Character.toString(frames.charAt(i)));
+                }
             }
         }
         return score;

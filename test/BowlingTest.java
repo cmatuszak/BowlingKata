@@ -26,4 +26,14 @@ public class BowlingTest {
     public void testTwoRollsRestMisses() {
         Assert.assertEquals(3, Bowling.score("12 -- -- -- -- -- -- -- -- --"));
     }
+
+    @Test
+    public void testFullRandomGameWithNoSpecialRolls() {
+        Assert.assertEquals(65, Bowling.score("12 3- 45 81 43 -2 52 81 9- -7"));
+    }
+
+    @Test
+    public void testSpareWithMissNextRoll() {
+        Assert.assertEquals(10, Bowling.score("1/ -- -- -- -- -- -- -- -- --"));
+    }
 }
