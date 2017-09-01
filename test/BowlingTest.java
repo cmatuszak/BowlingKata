@@ -36,4 +36,10 @@ public class BowlingTest {
     public void testSpareWithMissNextRoll() {
         Assert.assertEquals(10, Bowling.score("1/ -- -- -- -- -- -- -- -- --"));
     }
+
+    @Test
+    public void testSpareWith1NextRoll() {
+        Assert.assertEquals(12, Bowling.score("1/ 1- -- -- -- -- -- -- -- --"));
+    }
+
 }
